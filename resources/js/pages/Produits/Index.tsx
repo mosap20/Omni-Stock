@@ -86,28 +86,9 @@ export default function ProduitsIndex({ produits }: ProduitsPageProps) {
                         <td className="px-4 py-2 border">{produit.prixAchat} MAD</td>
                         <td className="px-4 py-2 border">{produit.prixVente} MAD</td>
                         <td className="px-4 py-2 border flex items-align gap-2">
-                          <Button
-                            size="icon"
-                            variant="outline"
-                            className="h-7 w-7"
-                            onClick={() => router.post(`/produits/${produit.id}/decrement-quantite`)}
-                            disabled={produit.quantite <= 0}
-                            title="Diminuer le stock"
-                            type="button"
-                          >
-                            <Minus size={16} />
-                          </Button>
+                          
                           <span>{produit.quantite}</span>
-                          <Button
-                            size="icon"
-                            variant="outline"
-                            className="h-7 w-7"
-                            onClick={() => router.post(`/produits/${produit.id}/increment-quantite`)}
-                            title="Augmenter le stock"
-                            type="button"
-                          >
-                            <Plus size={16} />
-                          </Button>
+                          
                         </td>
                         <td className="px-4 py-2 border">{produit.categorie}</td>
                         <td className="px-4 py-2 border">{produit.description}</td>
